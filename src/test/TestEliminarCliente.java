@@ -1,11 +1,10 @@
 package test;
 
 import negocio.ClienteABM;
-import org.hibernate.HibernateException;
 
 public class TestEliminarCliente {
 
-	public static void main(String[] args) throws HibernateException {
+	public static void main(String[] args) throws Exception {
 		ClienteABM abm = new ClienteABM();
 		long id = 3;
 		

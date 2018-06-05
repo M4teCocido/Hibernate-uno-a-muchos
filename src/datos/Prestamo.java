@@ -74,7 +74,7 @@ public class Prestamo {
 
 	@Override
 	public String toString() {
-		String prestamo = "Prestamo: $" + monto + "\nFecha: " + Funciones.traerFechaCorta(fecha) + "\nInteres: " + interes + "\n Cant. de Cuotas: " + cantCuotas;
+		String prestamo = "Prestamo: $" + monto + "\nFecha: " + Funciones.traerFechaCorta(fecha) + "\nInteres: " + interes + "\nCant. de Cuotas: " + cantCuotas;
 		return prestamo;
 	}
 	
