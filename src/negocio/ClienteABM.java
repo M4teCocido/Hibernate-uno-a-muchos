@@ -47,4 +47,5 @@ public class ClienteABM {
 	public Cliente traerClienteYPrestamos(long idCliente) {
 		return dao.traerClienteYPrestamos(idCliente);
 	}
+	
 }

@@ -69,7 +69,6 @@ public class ClienteDao {
 		try {
 			iniciaOperacion();
 			objeto = (Cliente) session.get(Cliente.class, idCliente);
-			tx.commit();
 		}finally {
 			session.close();
 		}
@@ -81,7 +80,6 @@ public class ClienteDao {
 		try {
 			iniciaOperacion();
 			objeto = (Cliente) session.createQuery("from Cliente c where c.dni = " + dni).uniqueResult();
-			tx.commit();
 		}finally {
 			session.close();
 		}
@@ -94,7 +92,7 @@ public class ClienteDao {
 		List<Cliente> lista = null;
 		try {
 			iniciaOperacion();
-			lista = session.createQuery("from Cliente c order by c.apellido asc c.nombre asc").list();
+			lista = session.createQuery("from Cliente c order by c.apellido asc, c.nombre asc").list();
 			tx.commit();
 		}finally {
 			session.close();
@@ -113,7 +111,6 @@ public class ClienteDao {
 		}finally {
 			session.close();
 		}
-		
 		return objeto;
 	}
 }
